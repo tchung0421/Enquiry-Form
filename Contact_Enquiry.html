@@ -1,35 +1,91 @@
 <!DOCTYPE HTML>
 <html lang="en">
+    <link href="styles.css" rel="stylesheet" type="text/css" />
    <head>
       <meta charset="UTF-8" />
-      <title>Contact Us</title>
    </head>
    <body>
-         <fieldset>
-            Contact information     
-            <br><div> 
-                <form method="post" target="_blank" autocomplete='on' action="enquiry.html">
+        <br><br><br><br><br><br><br>
+        <fieldset>
+            <div>
+                <h2> Contact Information </h2>
+            </div>
+                
+                <form> <!--method="post" target="_blank" autocomplete='on' action="enquiry.html"-->
                     <input type="email" placeholder="Enter Your E-mail" id="email" pattern="^.+@.+$" required/>
                     <input type="text" id="country_code" value="+1" pattern="^(\+?\d{1,3}|\d{1,4})$" size="2">
                     <input type="text" id="phone" placeholder="Enter Your Phone No." pattern="^[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" required/>
                     <br><br>
-                    <input type="submit" value="Continue Details" style="float: right;" disabled/>
+                    <input type="submit" id="contact_info" value="CONTINUE DETAILS" style="float: right;" class="button" onclick="next()"/>
                 </form>
-            </div>
+
         </fieldset>
             <script>
-                var input = document.getElementById('email');
-                input.oninvalid = function(event) {
-	                event.target.setCustomValidity('Please enter a valid email');
-                }
-                input = document.getElementById('country_code');
-                input.oninvalid = function(event) {
-	                event.target.setCustomValidity('Please enter a valid country code');
-                }
-                input = document.getElementById('phone');
-                input.oninvalid = function(event) {
-	                event.target.setCustomValidity('Please enter a valid phone number');
-                }
+                var email = document.getElementById('email');
+                var country = document.getElementById('country_code');
+                var phone = document.getElementById('phone');
+                function next() {
+                    
+                }    
             </script>
+            <fieldset>
+                <h2>Adult</h2>
+                <table style="width:100%"> 
+                    <tbody>
+                        <td>Name: </td>
+                        <td>DOB: </td>
+                        <td>Gender: </td>
+                    </tbody> 
+                </table>
+                <br>
+                <form>
+                    <h3>Adult 1</h3>
+                    <label for="title">Title</label>
+                    <select name="title" id="title">
+                        <option value="" disabled selected>Select Title</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Mrs.">Mrs.</option>
+                    </select>
+                    <label for="fname">First Name</label>
+                    <input type="text" name="fname" id="fname" placeholder="First Name" required>
+                    <label for="mname">Middle Name</label>
+                    <input type="text" name="mname" id="mname" placeholder="Middle Name" >
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname" id="lname" required placeholder="Last Name" required>
+                    <br>
+                    <label for="dob">Date of Birth</label>
+                    <input type="dob" name="dob" id="dob" placeholder="DD-MM-YY" required>
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender">
+                        <option value="" disabled selected>Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="nb">Non-binary</option>
+                    </select>
+                </form>
+                <input type="submit" id="contact_info" value="CONTINUE DETAILS" style="float: right;" class="button"/>
+            </fieldset>
+            <fieldset>
+                <table style="width:100%">
+                    <h4>Passenger Details</h4>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>First Name</th>
+                            <th>Middle Name</th>
+                            <th>Last Name</th>
+                            <th>DOB</th>
+                            <th>Gender</th>
+                        </tr>
+                    </thead>
+                </table>
+                <table style="width:100%">
+                    <h4>Price Details</h4>
+                    <tr><td style="text-alignment:left"><strong>1 Traveler: Per Adult</strong></td> <td style="text-alignment:right">USD</td></tr>
+                    <tr><td style="text-alignment:left">Flight Charges per Adult</td> <td style="text-alignment:right">USD</td></tr>
+                    <tr><td style="text-alignment:left">Taxes and Fees per Adult</td> <td style="text-alignment:right">USD</td></tr>
+                </table>
+            </fieldset>
     </body>
 </html>

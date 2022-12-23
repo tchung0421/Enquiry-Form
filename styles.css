@@ -1,0 +1,31 @@
+*{
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+fieldset {
+    background-color: #E6F2F5;
+    border: none;
+    border-radius: 2px;
+}
+
+form {
+    background-color: white;
+}
+
+table {
+    background-color: white;
+}
+
+.button {
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: white;
+    background-image: linear-gradient(to right, red , orange);
+}
+
+.button:disabled {
+    background-image: linear-gradient(to right, #9E9E9E , #ADADAD);
+}
